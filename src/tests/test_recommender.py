@@ -1,7 +1,7 @@
 import unittest
-from src import load_data
-from src import preprocess_data
-from src import collaborative_filtering 
+from src.load_data import load_data
+from src.preprocess_data import preprocess_data
+from src.collaborative_filtering import collaborative_filtering 
 
 class TestRecommender(unittest.TestCase):
 
@@ -15,7 +15,7 @@ class TestRecommender(unittest.TestCase):
         """Test for empty values in the data set."""
         ratings, _ = load_data()
         user_movie_interaction = preprocess_data(ratings)
-        self.assertEqual(user_movie_interaction.isnull().sum(), 0,'user_movie_interaction should contain no empty value')
+        self.assertEqual(user_movie_interaction.isnull().sum().sum(), 0,'user_movie_interaction should contain no empty value')
 
     def test_collaborative_filtering(self):
         """Test the collaborative filtering logic."""
