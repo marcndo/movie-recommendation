@@ -2,25 +2,37 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.9
     commands:
       - echo Installing dependencies...
       - pip install -r requirements.txt 
+      - apt-get update && apt-get install -y \
+        build-essential \
+        gcc \
+        g++ \
+        make \
+        libatlas-base-dev \
+        docker.io \
+        && rm -rf /var/lib/apt/lists/*
+
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 970547364207.dkr.ecr.us-west-2.amazonaws.com
 
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t 970547364207.dkr.ecr.us-west-2.amazonaws.com/movie-recommendation .
+      - docker build -t movie-recommendation .
+      - docker tag movie-recommendation:latest 970547364207.dkr.ecr.us-west-2.amazonaws.com/movie-recommendation:latest
 
   post_build:
-    commands:
-    - echo Logging in to Amazon ECR...
-    - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 970547364207.dkr.ecr.us-west-2.amazonaws.com
-    - echo Tagging the Docker image...
-    - docker tag movie-recommendation:latest 970547364207.dkr.ecr.us-west-2.amazonaws.com/movie-recommendation:latest
-    - echo Pushing Docker image to ECR...
-    - docker push 970547364207.dkr.ecr.us-west-2.amazonaws.com/movie-recommendation:latest
+     commands:
+      - echo Pushing Docker image to ECR...
+      - docker push 970547364207.dkr.ecr.us-west-2.amazonaws.com/movie-recommendation:latest
 
 artifacts:
   files:
     - app.py
-    - src/*
+
