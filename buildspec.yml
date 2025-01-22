@@ -13,7 +13,7 @@ phases:
         g++ \
         make \
         libatlas-base-dev \
-        docker.io \
+ #       docker.io \
         && rm -rf /var/lib/apt/lists/*
 
   pre_build:
