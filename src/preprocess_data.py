@@ -1,9 +1,11 @@
-import pandas as pd
-from scipy.sparse import csr_matrix
+# from scipy.sparse import csr_matrix
 
-
-def preprocess_data(ratings):
-    """Handle missing values and create user-item matrix"""
-    ratings = ratings.dropna()
-    user_movies_matrix = ratings.pivot(index='userId', columns='movieId', values='rating').fillna(0)
-    return user_movies_matrix
+# def preprocess_data(ratings):
+#     # Create a sparse matrix (user × movie)
+#     user_movie_matrix = csr_matrix(
+#         (
+#             ratings['rating'].values, 
+#             (ratings['userId'].values, ratings['movieId'].values)
+#         )
+#     )
+#     return user_movie_matrix
