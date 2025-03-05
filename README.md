@@ -32,7 +32,7 @@ Currently, the application is available for testing locally. The AWS EC2 deploym
    source venv/bin/activate
    Activate the virtual environment (Windows users: venv\Scripts\activate)
    pip install -r requirements.txt
-  Install required dependencies
+   Install required dependencies
    ```
   ## 3. Download the Dataset: The application relies on a movie ratings dataset to generate recommendations. The dataset is not stored in the repository due to its size. You can download the dataset from the following link:
    * [MovieLenz dataset](https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset)
