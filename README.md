@@ -34,16 +34,17 @@ The Movie Recommendation API is a RESTful web service developed using Flask and 
   git clone https://github.com/marcndo/movie-recommendation.git
   cd movie-recommendation-api
    ```
-  ### 2. Install Dependencies: Set up a virtual environment (recommended for isolation) and install all the necessary Python packages:
+  ### 2. Create a virtual environment and install Dependencies: Set up a virtual environment (recommended for isolation) and install all the necessary Python packages:
   ```
+   ### Create virtual environment
    python3 -m venv venv
-   Create virtual environment.
    source venv/bin/activate
    Activate the virtual environment (Windows users: venv\Scripts\activate)
+   ## Install required dependencies
    pip install -r requirements.txt
-   Install required dependencies
    ```
-  ## 3. Download the Dataset: The application relies on a movie ratings dataset to generate recommendations. The dataset is not stored in the repository due to its size. You can download the dataset from the following link:
+  ## 3. Download the Dataset.
+  The application relies on a movie ratings dataset to generate recommendations. The dataset is not stored in the repository due to its size. You can download the dataset from the following link:
    * [MovieLenz dataset](https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset)
 After downloading the dataset, place the ratings.csv and movies.csv files in the data/ directory of the project.
   ### 4. Run the Flask Application: Once you have the dataset and the dependencies set up, you can run the Flask application:
