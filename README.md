@@ -3,11 +3,20 @@
 ## 1. Project Overview
  ### Project Title:Movie Recommendation API
  ### Project Description:
-The Movie Recommendation API is a RESTful web service built with Flask, designed to provide personalized movie recommendations based on collaborative filtering algorithms. The API predicts movie ratings for a user by analyzing the preferences of other users with similar tastes. This project uses the Surprise library, a Python-based recommendation system toolkit.
+The Movie Recommendation API is a RESTful web service developed using Flask and Surprise (a Python-based recommendation system library), designed to deliver personalized movie recommendations. The application leverages collaborative filtering algorithms to predict movie ratings based on user preferences, providing a highly customized user experience. This project demonstrates my ability to build and deploy machine learning-powered applications, with a focus on scalable web services and cloud deployment.
 
-The application is a part of my portfolio showcasing my expertise in building machine learning-based applications using Flask for the backend, deploying to the cloud, and applying collaborative filtering techniques for recommendations.
+### Key Features:
 
-Currently, the application is available for testing locally. The AWS EC2 deployment is in progress and will be available shortly.
++ Collaborative Filtering: Utilizes collaborative filtering algorithms to generate movie recommendations based on the preferences of similar users.
++ RESTful API: Exposes a well-documented API to interact with the recommendation system, allowing easy integration with front-end interfaces or other applications.
++ Machine Learning Integration: Implements Surprise for collaborative filtering, showcasing proficiency in machine learning algorithms and data handling.
++ Flask Framework: Built with Flask, a lightweight Python framework, to create a modular and scalable backend architecture.
++ Cloud Deployment (AWS): The application is currently being deployed on AWS EC2, with ongoing work to make the service publicly accessible.
+### Project Goals:
++ Personalized User Experience: By implementing collaborative filtering, the API predicts user preferences for movies, allowing the system to suggest relevant titles.
++ Scalability and Deployability: The project is designed with scalability in mind, utilizing Flask for the backend and setting up cloud infrastructure to support future traffic and growth.
++ Machine Learning: Provides hands-on experience with machine learning techniques like collaborative filtering and model deployment in real-world applications.
+---
 
 ## 2. Technologies Used
  * Python 3.x – Programming language for developing the application.
@@ -93,11 +102,10 @@ This API exposes a GET endpoint to retrieve movie recommendations based on the u
   * 400 - Bad Request: When the userId parameter is missing or invalid.
 
     
-  ## 5. Deployment - In Progress.
-  #### Current Deployment Status:
-   * The application is currently available for local testing only, and can be run on your local machine following the steps provided in the "How to Run the Application Locally" section.
-   * Deployment to AWS EC2 is in progress. I am working on resolving a few technical issues related to AWS configuration and security settings to ensure a smooth deployment.
-Once deployment is completed on AWS EC2, the application will be available for remote testing using a public IP or a custom domain name. This section will be updated as soon as the deployment is finalized.
+  ## 5 Project Status.
+  + Local Testing: The API is currently functional and available for local testing, allowing users to experiment with personalized movie recommendations.
+  + Cloud Deployment: Deployment on AWS EC2 is in progress, and the application will be live soon, providing real-time recommendations in a production environment.
+
 
  ## 6. Future Enhancements (Deployment Plans).
   ### AWS EC2 Deployment:
