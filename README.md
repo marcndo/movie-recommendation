@@ -107,13 +107,13 @@ This API exposes a GET endpoint to retrieve movie recommendations based on the u
   + Cloud Deployment: Deployment on AWS EC2 is in progress, and the application will be live soon, providing real-time recommendations in a production environment.
 
 
- ## 6. Future Enhancements (Deployment Plans).
-  ### AWS EC2 Deployment:
- As mentioned, the application is being actively deployed to AWS EC2 to provide a more robust and scalable solution. Once deployed, it will be accessible remotely, and I will configure an Elastic IP and custom domain name for a professional touch.
-   * What’s Next:
-    * fanalize deployment on AWS.
-    * Add HTTPS support with SSL/TLS certificates.
-    * Provide interactive API documentation using Swagger for easier interaction by potential users.
-The documentation will be updated once the cloud deployment is completed, and  live API access will be provided for further testing.
+ ## 6. Future Work
++ Enhanced Recommendation Algorithm: Integrating additional filtering methods and hybrid recommendation strategies to improve prediction accuracy.
++ Front-End Integration: Developing a front-end interface (e.g., with React or Angular) to interact with the API and visualize movie recommendations.
++ Real-Time Data Updates: Implementing a mechanism for real-time updates and continuous improvement of the recommendation model with fresh data.
+
+
+ 
+
 
 
