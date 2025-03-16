@@ -26,6 +26,7 @@ The Movie Recommendation API is a RESTful web service developed using Flask and 
  * Numpy – Core library for numerical computations.
  * AWS EC2 (Deployment in progress) – Cloud infrastructure to deploy the application.
  * GitHub – Source code version control and collaboration platform.
+---
 
 ## 3. How to Run the Application Locally
  ## Step-by-Step Guide:
