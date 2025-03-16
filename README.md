@@ -70,6 +70,8 @@ The API will start running locally on http://localhost:5000.
        ]
     }
     ```
+---
+
   ## 4. API Endpoints Documentation
    ### API Overview:
 This API exposes a GET endpoint to retrieve movie recommendations based on the user’s movie ratings history.
